@@ -1,19 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import styles from './NavBar.module.css';
 
 const NarBar = () => {
   return (
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/table">Table</Link>
-      </li>
-      <li>
-        <Link to="/fixtures">Fixtures</Link>
-      </li>
-    </ul>
+    <div className={styles.nav}>
+      <NavLink to="/" activeClassName="active" exact>Home</NavLink>
+      <NavLink to="/table" activeClassName="active">Table</NavLink>
+      <NavLink to="/fixtures" activeClassName="active">Fixtures</NavLink>
+    </div>
   )
 }
 
