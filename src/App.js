@@ -31,16 +31,4 @@ function App() {
   );
 }
 
-// function Home() {
-//   return <h2>Home</h2>;
-// }
-
-// function Table() {
-//   return <h2>Table</h2>;
-// }
-
-// function Fixtures() {
-//   return <h2>Fixtures</h2>;
-// }
-
 export default App;
