@@ -4,8 +4,16 @@
 }
 
 .nav a {
-  color: #76766f;
+  color: rgba(0,0,0,0.5);
   text-decoration: none;
   line-height: 50px;
   padding: 0 20px;
+}
+
+.nav a:hover, .nav a.active {
+  color: rgba(0,0,0,0.7);
+}
+
+.nav a.active {
+  font-weight: bold;
 }
