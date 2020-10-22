@@ -1,0 +1,35 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.15);
+  width: 100%;
+}
+
+.nav a {
+  color: rgba(0,0,0,0.5);
+  text-decoration: none;
+  line-height: 50px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.nav a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: linear-gradient(90deg,#963cff,#a64dae);
+  transition: .2s;
+}
+
+.nav a.active {
+  color: rgba(0,0,0,0.7);
+  font-weight: 500;
+}
+
+.nav a.active:after, .nav a:hover:after {
+  height: 4px;
+}
