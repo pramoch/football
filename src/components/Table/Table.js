@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Table.module.css';
+import './Table.scss';
 
 const Table = () => {
 
@@ -247,7 +247,7 @@ const Table = () => {
   ]
 
   return (
-    <div className={styles.wrapper}>
+    <div className="wrapper">
       <table>
         <thead>
           <tr>
@@ -268,16 +268,16 @@ const Table = () => {
             data.map((team, index) => {
               return (
                 <tr>
-                  <td>{team.position}</td>
+                  <td className="center">{team.position}</td>
                   <td>{team.club}</td>
-                  <td>{team.played}</td>
-                  <td>{team.won}</td>
-                  <td>{team.drawn}</td>
-                  <td>{team.lost}</td>
-                  <td>{team.gf}</td>
-                  <td>{team.ga}</td>
-                  <td>{team.gd}</td>
-                  <td>{team.points}</td>
+                  <td className="center">{team.played}</td>
+                  <td className="center">{team.won}</td>
+                  <td className="center">{team.drawn}</td>
+                  <td className="center">{team.lost}</td>
+                  <td className="center">{team.gf}</td>
+                  <td className="center">{team.ga}</td>
+                  <td className="center">{team.gd}</td>
+                  <td className="center bold">{team.points}</td>
                 </tr>
               )
             })
