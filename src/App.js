@@ -15,17 +15,19 @@ function App() {
     <Router>
       <div className={styles.app}>
         <NavBar />
-        <Switch>
-          <Route path="/table">
-            <Table />
-          </Route>
-          <Route path="/fixtures">
-            <Fixtures />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <div className={styles.content}>
+          <Switch>
+            <Route path="/table">
+              <Table />
+            </Route>
+            <Route path="/fixtures">
+              <Fixtures />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   );
