@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+  flex: 0 0 200px;
+  background-color:#37003c;
+  background-image: url('../../images/header-bg.svg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: 100% 100%;
+
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .title {
+    line-height: 200px;
+    font-size: 72px;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+}

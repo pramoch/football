@@ -5,6 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import NavBar from './components/NavBar/NavBar';
+import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Fixtures from './components/Fixtures/Fixtures';
 import Table from './components/Table/Table';
@@ -15,6 +16,7 @@ function App() {
     <Router>
       <div className={styles.app}>
         <NavBar />
+        <Header />
         <div className={styles.content}>
           <Switch>
             <Route path="/table">

@@ -1,40 +1,56 @@
-.wrapper {
+.table {
   width: 100%;
-  max-width: 1024px;
-}
 
-table {
-  width: 100%;
-  color: rgba(0,0,0,0.7);
-  border-collapse:collapse;
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 
-  thead {
-    th {
-      font-weight: bold;
-      font-size: 12px;
-      background-color: rgba(0,0,0,0.05);
-    }
-  }
+    table {
+      width: 100%;
+      color: rgba(0,0,0,0.7);
+      border-collapse:collapse;
+      border: 1px solid rgba(0,0,0,0.1);
 
-  tbody {
-    tr {
-      border-bottom: 1px solid rgba(0,0,0,0.1);
+      thead {
+        th {
+          font-weight: bold;
+          font-size: 12px;
+          background-color: rgba(0,0,0,0.05);
+        }
+      }
 
-      td {
-        font-size: 15px;
+      tbody {
+        tr {
+          border-bottom: 1px solid rgba(0,0,0,0.1);
+
+          td {
+            font-size: 15px;
+            height: 32px;
+
+            img {
+              padding-top: 3px;
+            }
+          }
+        }
+      }
+
+      th, td {
+        padding: 12px 10px;
+      }
+
+      .left {
+        text-align: left;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .bold {
+        font-weight: bold;
       }
     }
   }
-
-  th, td {
-    padding: 12px 10px;
-  }
-
-  .center {
-    text-align: center;
-  }
-
-  .bold {
-    font-weight: bold;
-  }
 }
+

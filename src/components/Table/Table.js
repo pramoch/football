@@ -2,11 +2,11 @@ import React from 'react';
 import './Table.scss';
 
 const Table = () => {
-
   const data = [
     {
       position: 1,
       club: 'Everton',
+      img: 'eve',
       played: 5,
       won: 4,
       drawn: 1,
@@ -19,6 +19,7 @@ const Table = () => {
     {
       position: 2,
       club: 'Aston Villa',
+      img: 'ast',
       played: 4,
       won: 4,
       drawn: 0,
@@ -31,6 +32,7 @@ const Table = () => {
     {
       position: 3,
       club: 'Liverpool',
+      img: 'liv',
       played: 5,
       won: 3,
       drawn: 1,
@@ -43,6 +45,7 @@ const Table = () => {
     {
       position: 4,
       club: 'Leicester City',
+      img: 'lei',
       played: 5,
       won: 3,
       drawn: 0,
@@ -55,6 +58,7 @@ const Table = () => {
     {
       position: 5,
       club: 'Arsenal',
+      img: 'ars',
       played: 5,
       won: 3,
       drawn: 0,
@@ -67,6 +71,7 @@ const Table = () => {
     {
       position: 6,
       club: 'Wolvehampton Wanderers',
+      img: 'wol',
       played: 5,
       won: 3,
       drawn: 0,
@@ -79,6 +84,7 @@ const Table = () => {
     {
       position: 7,
       club: 'Tottenham Hotspur',
+      img: 'tot',
       played: 5,
       won: 2,
       drawn: 2,
@@ -91,6 +97,7 @@ const Table = () => {
     {
       position: 8,
       club: 'Chelsea',
+      img: 'che',
       played: 5,
       won: 2,
       drawn: 2,
@@ -103,6 +110,7 @@ const Table = () => {
     {
       position: 9,
       club: 'West Ham United',
+      img: 'whu',
       played: 5,
       won: 2,
       drawn: 1,
@@ -115,6 +123,7 @@ const Table = () => {
     {
       position: 10,
       club: 'Leeds United',
+      img: 'lee',
       played: 5,
       won: 2,
       drawn: 1,
@@ -127,6 +136,7 @@ const Table = () => {
     {
       position: 11,
       club: 'Manchester City',
+      img: 'mnc',
       played: 4,
       won: 2,
       drawn: 1,
@@ -139,6 +149,7 @@ const Table = () => {
     {
       position: 12,
       club: 'Southampton',
+      img: 'sou',
       played: 5,
       won: 2,
       drawn: 1,
@@ -151,6 +162,7 @@ const Table = () => {
     {
       position: 13,
       club: 'Newcastle United',
+      img: 'nwc',
       played: 5,
       won: 2,
       drawn: 1,
@@ -163,6 +175,7 @@ const Table = () => {
     {
       position: 14,
       club: 'Crystal Palace',
+      img: 'cry',
       played: 5,
       won: 2,
       drawn: 1,
@@ -175,6 +188,7 @@ const Table = () => {
     {
       position: 15,
       club: 'Manchester United',
+      img: 'mnu',
       played: 4,
       won: 2,
       drawn: 0,
@@ -187,6 +201,7 @@ const Table = () => {
     {
       position: 16,
       club: 'Brighton and Hove Albion',
+      img: 'bri',
       played: 5,
       won: 1,
       drawn: 1,
@@ -199,6 +214,7 @@ const Table = () => {
     {
       position: 17,
       club: 'West Bromwich Albion',
+      img: 'wba',
       played: 5,
       won: 0,
       drawn: 2,
@@ -211,6 +227,7 @@ const Table = () => {
     {
       position: 18,
       club: 'Burnley',
+      img: 'bur',
       played: 4,
       won: 0,
       drawn: 1,
@@ -223,6 +240,7 @@ const Table = () => {
     {
       position: 19,
       club: 'Sheffield United',
+      img: 'she',
       played: 5,
       won: 0,
       drawn: 1,
@@ -235,6 +253,7 @@ const Table = () => {
     {
       position: 20,
       club: 'Fulham',
+      img: 'ful',
       played: 5,
       won: 0,
       drawn: 1,
@@ -247,43 +266,47 @@ const Table = () => {
   ]
 
   return (
-    <div className="wrapper">
-      <table>
-        <thead>
-          <tr>
-            <th>Position</th>
-            <th>Club</th>
-            <th>Played</th>
-            <th>Won</th>
-            <th>Drawn</th>
-            <th>Lost</th>
-            <th>GF</th>
-            <th>GA</th>
-            <th>GD</th>
-            <th>Points</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            data.map((team, index) => {
-              return (
-                <tr>
-                  <td className="center">{team.position}</td>
-                  <td>{team.club}</td>
-                  <td className="center">{team.played}</td>
-                  <td className="center">{team.won}</td>
-                  <td className="center">{team.drawn}</td>
-                  <td className="center">{team.lost}</td>
-                  <td className="center">{team.gf}</td>
-                  <td className="center">{team.ga}</td>
-                  <td className="center">{team.gd}</td>
-                  <td className="center bold">{team.points}</td>
-                </tr>
-              )
-            })
-          }
-        </tbody>
-      </table>
+    <div className="table">
+      <div className="content">
+        <table>
+          <thead>
+            <tr>
+              <th>Position</th>
+              <th></th>
+              <th className="left">Club</th>
+              <th>Played</th>
+              <th>Won</th>
+              <th>Drawn</th>
+              <th>Lost</th>
+              <th>GF</th>
+              <th>GA</th>
+              <th>GD</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              data.map((team, index) => {
+                return (
+                  <tr key={index}>
+                    <td className="center">{team.position}</td>
+                    <td><img src={require(`../../images/teams/${team.img}.png`)} alt={team.club}></img></td>
+                    <td>{team.club}</td>
+                    <td className="center">{team.played}</td>
+                    <td className="center">{team.won}</td>
+                    <td className="center">{team.drawn}</td>
+                    <td className="center">{team.lost}</td>
+                    <td className="center">{team.gf}</td>
+                    <td className="center">{team.ga}</td>
+                    <td className="center">{team.gd}</td>
+                    <td className="center bold">{team.points}</td>
+                  </tr>
+                )
+              })
+            }
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }
